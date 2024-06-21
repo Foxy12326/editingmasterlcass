@@ -104,16 +104,16 @@ form button:hover {
 }
 
 /* Media Query for Mobile Devices */
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     body {
         background: url('image/mobile-background-image.jpg') no-repeat center center/cover;
     }
 }
 
 /* Media Query for Tablets and Larger Devices */
-@media (min-width: 600px) {
+@media (min-width: 768px) {
     .logo-container img {
-        width: 75px; /* Increase logo size for larger screens */
+        width: 40px; /* Increase logo size for larger screens */
     }
 
     .main-content {
