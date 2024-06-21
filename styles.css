@@ -9,13 +9,14 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: url('image/sitebackground-image.jpg') no-repeat center center/cover;
+    background: url('image/desktop-background-image.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
     color: white;
     position: relative;
+    text-align: left; /* Align text to the left */
 }
 
 .logo-container {
@@ -25,21 +26,23 @@ body {
 }
 
 .logo-container img {
-    width: 100px;
+    width: 50px; /* Adjust width for smaller screens */
     height: auto;
 }
 
 .main-content {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    flex-direction: column; /* Stack content vertically for mobile */
+    justify-content: center;
+    align-items: flex-start; /* Align items to the left */
     height: 100%;
     width: 100%;
-    padding: 10px;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculations */
 }
 
 .content {
-    max-width: 700px; /* Increase the max-width if needed */
+    max-width: 100%; /* Full width for mobile */
     padding: 30px;
     background: none;
     border-radius: 0;
@@ -47,7 +50,7 @@ body {
 
 h1 {
     font-family: 'Oswald', sans-serif;
-    font-size: 4.5em; /* Increase the font size */
+    font-size: 2.5em; /* Adjust font size for mobile */
     margin: 0;
     line-height: 1.1;
     color: white;
@@ -55,27 +58,28 @@ h1 {
 
 p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.2em; /* Increase the font size */
-    margin: 30px 5;
+    font-size: 1em; /* Adjust font size for mobile */
+    margin: 20px 0;
     color: white;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Center the form elements */
+    align-items: flex-start; /* Align form elements to the left */
+    width: 100%; /* Full width for mobile */
 }
 
 form input, form button {
-    width: 100%; /* Ensure they take the full width of the form */
+    width: 100%;
     max-width: 450px; /* Set a maximum width */
-    margin-bottom: 5px;
-    padding: 15px; /* Increase the padding */
-    font-size: 1.2em; /* Increase the font size */
+    margin-bottom: 10px;
+    padding: 15px;
+    font-size: 1em; /* Adjust font size for mobile */
     border: none;
     border-radius: 30px;
     outline: none;
-    box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+    box-sizing: border-box; /* Include padding and border in width and height */
 }
 
 form input {
@@ -99,6 +103,13 @@ form button:hover {
     background: rgba(204, 204, 204, 0.7);
 }
 
+/* Media Query for Mobile Devices */
+@media (max-width: 767px) {
+    body {
+        background: url('image/mobile-background-image.jpg') no-repeat center center/cover;
+    }
+}
+
 /* Media Query for Tablets and Larger Devices */
 @media (min-width: 768px) {
     .logo-container img {
@@ -106,7 +117,8 @@ form button:hover {
     }
 
     .main-content {
-        justify-content: center; /* Center content for larger screens */
+        flex-direction: row; /* Change to row for tablets */
+        justify-content: flex-start; /* Align content to the left */
     }
 
     .content {
@@ -114,7 +126,7 @@ form button:hover {
     }
 
     h1 {
-        font-size: 3em; /* Adjust font size for larger screens */
+        font-size: 3em; /* Increase font size for larger screens */
     }
 
     p {
@@ -133,7 +145,8 @@ form button:hover {
     }
 
     .main-content {
-        justify-content: flex-start; /* Align content to the left for desktops */
+        flex-direction: row; /* Ensure row direction for desktops */
+        justify-content: flex-start; /* Align content to the left */
     }
 
     .content {
