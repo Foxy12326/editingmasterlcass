@@ -128,7 +128,6 @@ form button:hover {
         justify-content: center; /* Center content vertically */
         align-items: center; /* Center content horizontally */
         text-align: center; /* Center text within the content */
-        margin-top: 140px; /* Adjust margin-top to push content below the logo */
     }
 
     .content {
@@ -163,7 +162,6 @@ form button:hover {
         flex-direction: column;
         justify-content: center; /* Center content vertically */
         align-items: flex-start; /* Align content to the left */
-        margin-top: 0; /* Remove top margin for larger screens */
     }
 
     .content {
@@ -197,8 +195,7 @@ form button:hover {
         flex-direction: column;
         justify-content: center; /* Center content vertically */
         align-items: flex-start; /* Align content to the left */
-        margin-top: 0; /* Remove top margin for larger screens */
-        margin-left: 10; 
+        padding-left: 40px; /* Add padding to the left to move content to the right */
     }
 
     .content {
