@@ -198,6 +198,7 @@ form button:hover {
         justify-content: center; /* Center content vertically */
         align-items: flex-start; /* Align content to the left */
         margin-top: 0; /* Remove top margin for larger screens */
+        margin-left: 10; 
     }
 
     .content {
