@@ -105,6 +105,12 @@ form button:hover {
 
 /* Media Query for Mobile Devices */
 @media (max-width: 767px) {
+    html, body {
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
     body {
         background: url('image/mobile-background-image.jpg') no-repeat center center/cover;
     }
