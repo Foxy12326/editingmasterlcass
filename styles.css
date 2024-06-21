@@ -68,19 +68,19 @@ form {
 
 form input, form button {
     width: 100%; /* Ensure they take the full width of the form */
-        max-width: 450px; /* Set a maximum width */
-        margin-bottom: 5px;
-        padding: 15px; /* Increase the padding */
-        font-size: 1.2em; /* Increase the font size */
-        border: none;
-        border-radius: 30px;
-        outline: none;
-        box-sizing: border-box; /* Ensure padding and border are included in the width and height */
+    max-width: 450px; /* Set a maximum width */
+    margin-bottom: 5px;
+    padding: 15px; /* Increase the padding */
+    font-size: 1.2em; /* Increase the font size */
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    box-sizing: border-box; /* Ensure padding and border are included in the width and height */
 }
 
 form input {
     background: rgba(255, 255, 255, 0.5); /* Add transparency */
-        color: #000;
+    color: #000;
 }
 
 form input::placeholder {
@@ -89,12 +89,66 @@ form input::placeholder {
 
 form button {
     background: rgba(255, 255, 255, 0.7); /* Reduced opacity */
-        color: #000;
-        cursor: pointer;
-        transition: background 0.8s;
-        font-weight: bold; /* Make the text bold */
+    color: #000;
+    cursor: pointer;
+    transition: background 0.8s;
+    font-weight: bold; /* Make the text bold */
 }
 
 form button:hover {
     background: rgba(204, 204, 204, 0.7);
+}
+
+/* Media Query for Tablets and Larger Devices */
+@media (min-width: 768px) {
+    .logo-container img {
+        width: 75px; /* Increase logo size for larger screens */
+    }
+
+    .main-content {
+        justify-content: center; /* Center content for larger screens */
+    }
+
+    .content {
+        max-width: 80%; /* Adjust max-width for larger screens */
+    }
+
+    h1 {
+        font-size: 3em; /* Adjust font size for larger screens */
+    }
+
+    p {
+        font-size: 1.2em; /* Maintain font size for larger screens */
+    }
+
+    form input, form button {
+        max-width: 500px; /* Increase max-width for larger screens */
+    }
+}
+
+/* Media Query for Desktops */
+@media (min-width: 1024px) {
+    .logo-container img {
+        width: 100px; /* Further increase logo size for desktops */
+    }
+
+    .main-content {
+        justify-content: flex-start; /* Align content to the left for desktops */
+    }
+
+    .content {
+        max-width: 700px; /* Increase max-width for desktops */
+    }
+
+    h1 {
+        font-size: 4.5em; /* Maintain font size for desktops */
+    }
+
+    p {
+        font-size: 1.2em; /* Maintain font size for desktops */
+    }
+
+    form input, form button {
+        max-width: 450px; /* Maintain max-width for desktops */
+    }
 }
