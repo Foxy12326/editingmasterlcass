@@ -12,7 +12,7 @@ body {
     background: url('image/sitebackground-image.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
-    justify-content: flex-start; /* Align content to the left horizontally */
+    justify-content: center; /* Center content horizontally */
     align-items: center; /* Center content vertically */
     color: white;
     position: relative;
@@ -108,8 +108,23 @@ form button:hover {
         background: url('image/mobile-background-image.jpg') no-repeat center center/cover;
     }
 
+    .logo-container {
+        top: 20px; /* Adjust top position for smaller screens */
+        left: 20px; /* Adjust left position for smaller screens */
+    }
+
     .logo-container img {
-        width: 40px; /* Adjust logo size for smaller screens */
+        width: 100px; /* Adjust logo size for smaller screens */
+    }
+
+    .main-content {
+        justify-content: flex-start; /* Align content to the top */
+        padding: 20px; /* Add padding for better spacing */
+    }
+
+    .content {
+        max-width: 100%; /* Full width for mobile */
+        padding: 20px; /* Adjust padding for smaller screens */
     }
 
     h1 {
@@ -133,10 +148,9 @@ form button:hover {
     }
 
     .main-content {
-        flex-direction: column; /* Ensure content is stacked vertically */
-        justify-content: center; /* Center content vertically */
-        align-items: flex-start; /* Align items to the left */
-        padding: 50px; /* Add padding for better spacing on larger screens */
+        flex-direction: row; /* Change to row for tablets */
+        justify-content: flex-start; /* Align content to the left */
+        align-items: center; /* Center content vertically */
     }
 
     .content {
@@ -163,10 +177,9 @@ form button:hover {
     }
 
     .main-content {
-        flex-direction: column; /* Ensure content is stacked vertically */
-        justify-content: center; /* Center content vertically */
-        align-items: flex-start; /* Align items to the left */
-        padding: 10px; /* Add padding for better spacing on larger screens */
+        flex-direction: row; /* Ensure row direction for desktops */
+        justify-content: flex-start; /* Align content to the left */
+        align-items: center; /* Center content vertically */
     }
 
     .content {
