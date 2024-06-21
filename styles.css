@@ -9,14 +9,13 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    background: url('image/desktop-background-image.jpg') no-repeat center center/cover;
+    background: url('image/sitebackground-image.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
-    justify-content: center; /* Center content horizontally */
+    justify-content: flex-start; /* Align content to the left horizontally */
     align-items: center; /* Center content vertically */
     color: white;
     position: relative;
-    text-align: left; /* Align text to the left */
 }
 
 .logo-container {
@@ -33,7 +32,7 @@ body {
 .main-content {
     display: flex;
     flex-direction: column; /* Stack content vertically for mobile */
-    justify-content: center;
+    justify-content: center; /* Center content vertically */
     align-items: flex-start; /* Align items to the left */
     height: 100%;
     width: 100%;
@@ -42,7 +41,7 @@ body {
 }
 
 .content {
-    max-width: 100%; /* Full width for mobile */
+    max-width: 700px; /* Set a max-width for the content */
     padding: 30px;
     background: none;
     border-radius: 0;
@@ -108,17 +107,36 @@ form button:hover {
     body {
         background: url('image/mobile-background-image.jpg') no-repeat center center/cover;
     }
+
+    .logo-container img {
+        width: 40px; /* Adjust logo size for smaller screens */
+    }
+
+    h1 {
+        font-size: 2em; /* Adjust font size for mobile */
+    }
+
+    p {
+        font-size: 0.9em; /* Adjust font size for mobile */
+    }
+
+    form input, form button {
+        font-size: 0.9em; /* Adjust font size for mobile */
+        padding: 12px; /* Adjust padding for mobile */
+    }
 }
 
 /* Media Query for Tablets and Larger Devices */
 @media (min-width: 768px) {
     .logo-container img {
-        width: 40px; /* Increase logo size for larger screens */
+        width: 75px; /* Increase logo size for larger screens */
     }
 
     .main-content {
-        flex-direction: row; /* Change to row for tablets */
-        justify-content: flex-start; /* Align content to the left */
+        flex-direction: column; /* Ensure content is stacked vertically */
+        justify-content: center; /* Center content vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 50px; /* Add padding for better spacing on larger screens */
     }
 
     .content {
@@ -145,8 +163,10 @@ form button:hover {
     }
 
     .main-content {
-        flex-direction: row; /* Ensure row direction for desktops */
-        justify-content: flex-start; /* Align content to the left */
+        flex-direction: column; /* Ensure content is stacked vertically */
+        justify-content: center; /* Center content vertically */
+        align-items: flex-start; /* Align items to the left */
+        padding: 10px; /* Add padding for better spacing on larger screens */
     }
 
     .content {
