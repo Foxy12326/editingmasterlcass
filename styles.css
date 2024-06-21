@@ -128,6 +128,8 @@ form button:hover {
         justify-content: center; /* Center content vertically */
         align-items: center; /* Center content horizontally */
         text-align: center; /* Center text within the content */
+        margin-top: 140px; /* Adjust margin-top to push content below the logo */
+
     }
 
     .content {
